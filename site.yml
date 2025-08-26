@@ -1,0 +1,4 @@
+---
+
+- name: Pre Kubernetes
+  import_playbook: pre-kubernetes.yml

@@ -1,0 +1,28 @@
+---
+
+- name: Update package repos
+  apt:
+    update_cache: yes
+
+- name: Developer group
+  group:
+    name: developer
+    state: present
+
+- name: Create User Logins
+  user:
+    name: "{{ item.username }}"
+    comment: "{{ item.name }}"
+    groups: developer
+    state: present
+    shell: /bin/bash
+    append: yes
+  with_items: "{{ user_config }}"
+  changed_when: no
+
+- name: Add SSH key authorization
+  ansible.posix.authorized_key:
+    user: "{{ item.username }}"
+    state: present
+    key: "{{ item.sshkey }}"
+  with_items: "{{ user_config }}"
