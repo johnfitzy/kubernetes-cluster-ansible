@@ -1,7 +1,7 @@
 boxes = [
     {
       name: "srv1",
-      box: "ubuntu/jammy64",
+      box: "cloud-image/ubuntu-24.04",
       hostname: "srv1.local",
       memory: 2048,
       cpus: 2,
@@ -9,7 +9,7 @@ boxes = [
     },
     {
       name: "srv2",
-      box: "ubuntu/jammy64",
+      box: "cloud-image/ubuntu-24.04",
       hostname: "srv2.local",
       memory: 2048,
       cpus: 2,
@@ -17,7 +17,7 @@ boxes = [
     },
     {
       name: "srv3",
-      box: "ubuntu/jammy64",
+      box: "cloud-image/ubuntu-24.04",
       hostname: "srv3.local",
       memory: 2048,
       cpus: 2,
