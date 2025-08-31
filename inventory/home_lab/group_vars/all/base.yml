@@ -1,0 +1,13 @@
+---
+# Create users
+user_config:
+  - username: john
+    name: "John Fitzgerald"
+    sshkey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICLqTtfx8pSumOPauSibOdWdpOAj3mlknXn5tBAVNlh3"
+
+# geerlingguy.security - check default role vars - applying them
+security_sudoers_passwordless:
+  - john
+
+security_ssh_allowed_groups:
+  - developer

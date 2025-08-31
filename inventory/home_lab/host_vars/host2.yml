@@ -1,0 +1,4 @@
+ansible_host: 192.168.1.12
+ansible_user: john
+hostname_short: host2
+ansible_connection: ssh
