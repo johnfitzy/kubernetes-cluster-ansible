@@ -39,11 +39,12 @@ This boots the three VMs without running Ansible. You can verify they are up wit
 vagrant status
 ```
 
-**3. Install Ansible roles**
+**3. Install Ansible roles and collections**
 
 From the VS Code terminal (inside the devcontainer):
 ```shell
 ansible-galaxy install -r roles/requirements.yml
+ansible-galaxy collection install -r collections/requirements.yml
 ```
 
 **4. Run the playbook**

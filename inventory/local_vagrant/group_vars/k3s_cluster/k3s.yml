@@ -1,0 +1,5 @@
+k3s_version: v1.35.1+k3s1
+token: vagrant-k3s-secret # a shared secret used purely during node bootstrapping
+api_endpoint: "https://{{ hostvars['srv1']['ansible_host'] }}:6443" # tells srv2 and srv3 where to find srv1's k3s API server
+extra_server_args: ""
+extra_agent_args: ""
