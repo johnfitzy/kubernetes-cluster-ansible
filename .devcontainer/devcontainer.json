@@ -1,0 +1,17 @@
+{
+  "name": "Ansible",
+  // Community Ansible dev tools image - has ansible, ansible-lint, ansible-dev-tools pre-installed
+  "image": "ghcr.io/ansible/community-ansible-dev-tools:latest",
+  // Host networking lets the container reach Vagrant VMs on 192.168.56.x
+  // This only works on Linux (which you're on)
+  "runArgs": ["--network=host"],
+  // Mount your SSH keys so Ansible can connect to hosts
+  "mounts": [
+    "source=${localEnv:HOME}/.vagrant.d,target=/root/.vagrant.d,type=bind,consistency=cached,readonly"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": ["redhat.ansible", "redhat.vscode-yaml"]
+    }
+  }
+}

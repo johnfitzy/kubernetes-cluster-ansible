@@ -36,19 +36,6 @@ Vagrant.configure("2") do |config|
       box_config.vm.box = box[:box]
       box_config.vm.hostname = box[:hostname]
       box_config.vm.network "private_network", ip: box[:ip]
-
-      # do ansible provision after last box starts
-      if index == boxes.size - 1
-        box_config.vm.provision "ansible" do |ansible|
-          ansible.compatibility_mode = "2.0"
-          ansible.playbook = "site.yml"
-          ansible.limit = "all"
-          ansible.inventory_path = "inventory/local_vagrant"
-          ansible.become = true
-          ansible.galaxy_role_file = "roles/requirements.yml"
-          ansible.galaxy_command = "ansible-galaxy install -f -r %{role_file}"
-        end
-      end
     end
   end
 end
