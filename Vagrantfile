@@ -3,15 +3,15 @@ boxes = [
     name: "srv1",
     box: "cloud-image/ubuntu-24.04",
     hostname: "srv1.local",
-    memory: 1024,
-    cpus: 1,
+    memory: 2048,
+    cpus: 2,
     ip: "192.168.56.111"
   },
   {
     name: "srv2",
     box: "cloud-image/ubuntu-24.04",
     hostname: "srv2.local",
-    memory: 512,
+    memory: 1024,
     cpus: 1,
     ip: "192.168.56.112"
   }
