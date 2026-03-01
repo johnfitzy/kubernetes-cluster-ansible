@@ -20,6 +20,19 @@
   with_items: "{{ user_config }}"
   changed_when: no
 
+
+- name: Create k8s-admin group
+  group:
+    name: k8s-admin
+    state: present
+
+- name: Add users to k8s-admin group
+  user:
+    name: "{{ item }}"
+    groups: k8s-admin
+  with_items: "{{ k8s_admins }}"
+  changed_when: no
+
 - name: Make Vagrant login shell bash
   user:
     name: vagrant

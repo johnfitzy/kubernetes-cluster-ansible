@@ -2,3 +2,6 @@
 
 - name: Pre Kubernetes
   import_playbook: pre-kubernetes.yml
+
+- name: K3s
+  import_playbook: k3s.yml

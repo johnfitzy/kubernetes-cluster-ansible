@@ -10,6 +10,9 @@ user_config:
     name: "John Fitzgerald"
     sshkey: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFrUN5FoGMaokynGF5rD6DssBxCC4GXn9AryzL8q6EPt"
 
+k8s_admins:
+  - john
+
 # geerlingguy.security
 security_sudoers_passwordless:
   - john

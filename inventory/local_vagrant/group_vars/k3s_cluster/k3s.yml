@@ -1,0 +1,10 @@
+k3s_version: v1.35.1+k3s1
+token: vagrant-k3s-secret # a shared secret used purely during node bootstrapping
+api_endpoint: "{{ hostvars['srv1']['ansible_host'] }}" # IP only - collection constructs https://<api_endpoint>:<api_port> internally
+extra_server_args: ""
+extra_agent_args: ""
+
+server_config_yaml: |
+  write-kubeconfig-mode: "0640"
+  write-kubeconfig-group: "k8s-admin"
+
